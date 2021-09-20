@@ -1,0 +1,47 @@
+/* iCheck darkblue Skin
+----------------------------------- */
+.icheckbox_minimal-darkblue,
+.iradio_minimal-darkblue {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 16px;
+    height: 17px;
+    background: url(darkblue.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.iradio_minimal-darkblue {
+    background-position: 0 0;
+}
+.iradio_minimal-darkblue.hover {
+    background-position: -16px 0;
+}
+.iradio_minimal-darkblue.checked {
+    background-position: -16px 0;
+}
+
+/* iCheck lightblue Skin
+----------------------------------- */
+.icheckbox_minimal-lightblue,
+.iradio_minimal-lightblue {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 16px;
+    height: 17px;
+    background: url(lightblue.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.iradio_minimal-lightblue {
+    background-position: 0 0;
+}
+.iradio_minimal-lightblue.hover {
+    background-position: -16px 0;
+}
+.iradio_minimal-lightblue.checked {
+    background-position: -16px 0;
+}

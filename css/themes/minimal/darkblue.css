@@ -1,0 +1,24 @@
+/* iCheck darkblue Skin
+----------------------------------- */
+.icheckbox_minimal-darkblue,
+.iradio_minimal-darkblue {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 16px;
+    height: 17px;
+    background: url(darkblue.png) no-repeat;
+    border: none;
+    cursor: pointer;
+	float:left;
+}
+
+.iradio_minimal-darkblue {
+    background-position: 0 0;
+}
+.iradio_minimal-darkblue.hover {
+    background-position: -16px 0;
+}
+.iradio_minimal-darkblue.checked {
+    background-position: -16px 0;
+}

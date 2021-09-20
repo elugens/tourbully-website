@@ -1,0 +1,100 @@
+﻿body { margin:0; padding: 0; }
+.rs_searchWrap { color:#333; max-width:260px; height:100%; max-height:100%; font-size:15px; position:relative; font-family:Arial, sans-serif; }
+#changeSearchForm .rs_multiSearchBoxTabsList { width:100%; height:36px; padding:10px 0; }
+#changeSearchForm .rs_multiSearchBoxTabsList .options { display:none; float:left; height:36px; line-height:35px; font-size:16px; padding:0 2%; margin-right:7px; color:#0a87c6; background: #f2f2f2; border:1px solid #cacaca; border-bottom:1px solid #eaeaea; cursor:pointer; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; -khtml-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0; }
+#changeSearchForm .rs_multiSearchBoxTabsList .options .radio { display:none; }
+#changeSearchForm .rs_multiSearchBoxTabsList .white { color:#333; background:#eaeaea; border-bottom:2px solid #eaeaea; }
+.rs_searchWrap .rs_multiSearchBoxTabsList .rs_mutliSearchBoxSelect { display:block; background: #fff; width:94%; width:-webkit-calc(94% - 2px); width:calc(94% - 2px); height:40px; padding: 5px 2%; margin:0; border: 1px solid #cacaca; color: #636363; margin:0 12px; }
+#changeSearchForm { background:#eaeaea; border:1px solid #cacaca; position: relative; margin:0;  }
+#changeSearchForm .left { float: left; }
+#changeSearchForm .noMargin { margin:0 !important; }
+#changeSearchForm .clear { clear: both; }
+#changeSearchForm .bold { font-weight: bold; }
+#changeSearchForm a { color: #6699cc; text-decoration:underline; }
+#changeSearchForm a:hover { text-decoration:none; }
+#changeSearchForm .rs_searchbox { }
+#changeSearchForm h2 { color:#333; font-size:28px; font-weight:normal; font-family: 'Oswald', sans-serif; margin:0 0 14px; *margin:0 0 5px; }
+#changeSearchForm .search { background: #68a944; background: -moz-linear-gradient(top, #68a944 0%, #3c910f 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#68a944), color-stop(100%,#3c910f)); background: -webkit-linear-gradient(top, #68a944 0%,#3c910f 100%); background: -o-linear-gradient(top, #68a944 0%,#3c910f 100%);
+background: -ms-linear-gradient(top, #68a944 0%,#3c910f 100%); background: linear-gradient(top, #68a944 0%,#3c910f 100%); border:none; width:100%; height:49px; float:none; margin:0; color: #fff; font-size:20px; cursor: pointer; text-indent:0; -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; }
+#changeSearchForm .search:hover { background: #3c910f; }
+#changeSearchForm .bottomLinks { position:absolute; right:100px; bottom:18px; text-align:right; }
+#changeSearchForm .label { display:none; font-weight:bold; margin-bottom:3px; }
+#changeSearchForm .rs_multiSearchBoxAutosuggest { background: #fff; width:96%; width:-webkit-calc(96% - 2px); width:calc(96% - 2px); height:30px; padding: 5px 2%; margin: 0 0 15px 0; border: 1px solid #cacaca; color: #636363; }
+#changeSearchForm .rs_multiSearchBoxCalendarShow { background-image:url('../images/calendar.gif'); 
+background-repeat:no-repeat; background-position:right; width:96%; width:-webkit-calc(96% - 2px); width:calc(96% - 2px); height:30px; padding:5px 2%; margin:0 0 15px 0; border:1px solid #cacaca; color:#636363; cursor:pointer; }
+#changeSearchForm .rs_multiSearchBoxRooms { background: #fff; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px); height:40px; padding: 5px 2%; margin: 0 0 15px 0; border: 1px solid #cacaca; color: #636363; }
+/*Hotel Styles*/
+#changeSearchForm .rs_multiSearchBoxContent_hotel { background:#eaeaea; border:none; padding:5px 10px 15px; }
+#changeSearchForm .rs_multiSearchBoxContent_hotel .left { width:100%; margin-right:0; }
+/*Rental Car Styles*/
+#changeSearchForm .rs_multiSearchBoxContent_car { display: none; background:#eaeaea; border:none; padding:5px 10px 15px; }
+#changeSearchForm .rs_multiSearchBoxContent_car .left { width:100%; margin-right:0; }
+#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxAutosuggestContainer_pickUp { float:none; width:100%; margin-right:0%; }
+#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxAutosuggestContainer_dropOff { float:none; width:100%; }
+#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxAutosuggest { margin-bottom: 10px; }
+#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxCalendarGroupContainer_stayDuration { margin-top: 5px; }
+#changeSearchForm .rs_multiSearchBoxContent_car .rs_destination { margin-bottom: 5px; display: block; margin-top: 5px; }
+#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxCalendarContainer_checkIn { margin-top: 5px; }
+#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxCalendarShow { width:96%; width:-webkit-calc(96% - 2px); width:calc(96% - 2px); margin:0 0 10px 0; }
+#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxCalendarTime { background: #fff; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px); height:40px; padding: 5px 2%; margin:0 0 10px 0; border: 1px solid #cacaca; color: #636363; }
+/*Vacation Package Styles*/
+#changeSearchForm .rs_multiSearchBoxContent_vp { display: none; background:#eaeaea; border:none; padding:5px 10px 15px; }
+#changeSearchForm .rs_multiSearchBoxContent_vp .left { width:100%; margin-right:0; }
+#changeSearchForm .rs_multiSearchBoxContent_vp .rs_multiSearchBoxAutosuggestContainer_origin { float:none; width:100%; margin-right:0; }
+#changeSearchForm .rs_multiSearchBoxContent_vp .rs_multiSearchBoxAutosuggestContainer_destination { float:none; width:100%; }
+#changeSearchForm .rs_multiSearchBoxContent_vp .vp_passengers { float:none; width:100%; margin-right:0; }
+/*Air Styles*/
+#changeSearchForm .rs_multiSearchBoxContent_air { display: none; background:#eaeaea; border:none; padding:5px 10px 15px; }
+#changeSearchForm .rs_multiSearchBoxContent_air .search { margin:0; }
+#changeSearchForm .rs_multiSearchBoxContent_air .left { width:100%; margin-right:0; }
+#changeSearchForm .rs_multiSearchBoxContent_air h2 { margin:0 0 5px; }
+#changeSearchForm .rs_multiSearchBoxContent_air .air_options { padding:4px 0; font-size: 12px; margin-bottom:10px; }
+#changeSearchForm .rs_multiSearchBoxContent_air .air_options .air_option  { display: inline-block; margin-right:7px; }
+#changeSearchForm .rs_multiSearchBoxContent_air .air_options input { float: left; margin-top: 1px; }
+#changeSearchForm .rs_multiSearchBoxContent_air .air_passengers { float: none; width:100%; margin-right:0; }
+#changeSearchForm .rs_multiSearchBoxContent_air .air_cabin { float:none; width:100%; }
+#changeSearchForm .rs_multiSearchBoxContent_air .air_cabin .rs_multiSearchBoxCabin { background: #fff; width:100%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px); height:40px; margin:0 0 10px; padding: 5px 2%; border: 1px solid #cacaca; color: #636363; }
+
+@media only screen and (min-width:400px){
+	#changeSearchForm .search { width:180px; height:52px; }
+
+	#changeSearchForm .rs_multiSearchBoxContent_hotel .left { width:31%; margin-right:3.5%; }
+
+	#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxAutosuggestContainer_pickUp { float:left; width:48%; margin-right:3.5%; }
+	#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxAutosuggestContainer_dropOff { float:left; width:48%; }
+	#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxAutosuggest { margin-bottom: 0px; }
+	#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxCalendarShow { width:46%; width:-webkit-calc(46% - 2px); width:calc(46% - 2px); }
+	#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxCalendarTime { width:46%; width:-webkit-calc(46% - 2px); width:calc(46% - 2px); margin:0 0 0 3%; }
+
+	#changeSearchForm .rs_multiSearchBoxContent_vp .left { width:48%; margin-right:4%; }
+	#changeSearchForm .rs_multiSearchBoxContent_vp .rs_multiSearchBoxAutosuggestContainer_origin { float:left; width:48%; margin-right:4%; }
+	#changeSearchForm .rs_multiSearchBoxContent_vp .rs_multiSearchBoxAutosuggestContainer_destination { float:left; width:48%; }
+	#changeSearchForm .rs_multiSearchBoxContent_vp .vp_passengers { float: left; width:32%; margin-right:2%; }
+
+	#changeSearchForm .rs_multiSearchBoxContent_air .left { width:48%; margin-right:4%; }
+	#changeSearchForm .rs_multiSearchBoxContent_air .air_passengers { float: left; width:30%; margin-right:2%; }
+	#changeSearchForm .rs_multiSearchBoxContent_air .air_cabin { float:left; width:36%; }
+	#changeSearchForm .rs_multiSearchBoxContent_air .air_cabin .rs_multiSearchBoxCabin { margin:0; }
+}
+@media only screen and (min-width:550px){
+	#changeSearchForm .label { display:block; }
+
+	#changeSearchForm .rs_multiSearchBoxTabsList { height:38px; padding:0; }
+	#changeSearchForm .rs_multiSearchBoxTabsList .options { display:block; }
+	.rs_searchWrap .rs_multiSearchBoxTabsList .rs_mutliSearchBoxSelect { display:none; }
+
+	#changeSearchForm { background:none; border:none; }
+
+	#changeSearchForm .rs_multiSearchBoxAutosuggest { height:40px; }
+	#changeSearchForm .rs_multiSearchBoxCalendarShow { height:40px; }
+	#changeSearchForm .rs_multiSearchBoxRooms { height:50px; }
+	#changeSearchForm .rs_multiSearchBoxContent_car .left { width:48%; margin-right:3.5%; }
+	#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxCalendarTime { height:50px; }
+
+	#changeSearchForm .rs_multiSearchBoxContent_air .air_cabin .rs_multiSearchBoxCabin { height:50px; }
+
+	#changeSearchForm .rs_multiSearchBoxContent_hotel { border:1px solid #cacaca; padding:5px 30px 15px; }
+	#changeSearchForm .rs_multiSearchBoxContent_car { border:1px solid #cacaca; padding:5px 30px 15px; }
+	#changeSearchForm .rs_multiSearchBoxContent_air { border:1px solid #cacaca; padding:5px 30px 15px; }
+	#changeSearchForm .rs_multiSearchBoxContent_vp { border:1px solid #cacaca; padding:5px 30px 15px; }
+}	

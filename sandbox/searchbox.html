@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<!-- SEARCHBOX CODE // Must have jquery, bgiframe and $isLocal. -->
+<link rel="stylesheet" type="text/css" href="../css/rs_searchbox.css">
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'></script>
+<script type='text/javascript' src='http://secure.rezserver.com/js/bgiframe.js'></script>
+<script type='text/javascript'>
+var rs_refID = 6084;
+var rs_currentProduct = 'hotel';
+var rs_generateRooms= false;
+$(document).ready(function(){
+	var $options = $('.options');
+	$options.click(function(){
+	   $options.removeClass('white');
+	   $(this).addClass('white');
+	});
+});
+</script>
+
+<!--[if IE]>
+	<style type="text/css">
+		#changeSearchForm .rs_multiSearchBoxContent_air .air_options input { margin-top: -2px; }
+		#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxCalendarShow, #changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxCalendarTime { float:left; }
+	</style>
+<![endif]-->
+
+<!--[if lte IE 8]>
+	<style type="text/css">
+		#changeSearchForm .search { width:180px; height:52px; }
+
+		#changeSearchForm .rs_multiSearchBoxContent_hotel .left { width:31%; margin-right:3.5%; }
+
+		#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxAutosuggestContainer_pickUp { float:left; width:48%; margin-right:3.5%; }
+		#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxAutosuggestContainer_dropOff { float:left; width:48%; }
+		#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxAutosuggest { margin-bottom: 0px; }
+		#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxCalendarShow { width:46%; width:-webkit-calc(46% - 2px); width:calc(46% - 2px); }
+		#changeSearchForm .rs_multiSearchBoxContent_car .rs_multiSearchBoxCalendarTime { width:46%; height:50px; width:-webkit-calc(46% - 2px); width:calc(46% - 2px); margin:0 0 0 3%; }
+
+		#changeSearchForm .rs_multiSearchBoxContent_vp .left { width:48%; margin-right:4%; }
+		#changeSearchForm .rs_multiSearchBoxContent_vp .rs_multiSearchBoxAutosuggestContainer_origin { float:left; width:48%; margin-right:4%; }
+		#changeSearchForm .rs_multiSearchBoxContent_vp .rs_multiSearchBoxAutosuggestContainer_destination { float:left; width:48%; }
+		#changeSearchForm .rs_multiSearchBoxContent_vp .vp_passengers { float: left; width:32%; margin-right:2%; }
+
+		#changeSearchForm .rs_multiSearchBoxContent_air .left { width:48%; margin-right:4%; }
+		#changeSearchForm .rs_multiSearchBoxContent_air .air_passengers { float: left; width:30%; margin-right:2%; }
+		#changeSearchForm .rs_multiSearchBoxContent_air .air_cabin { float:left; width:36%; }
+		#changeSearchForm .rs_multiSearchBoxContent_air .air_cabin .rs_multiSearchBoxCabin { margin:0; height:50px; }
+
+		#changeSearchForm .label { display:block; }
+
+		#changeSearchForm .rs_multiSearchBoxTabsList { height:38px; padding:0; }
+		#changeSearchForm .rs_multiSearchBoxTabsList .options { display:block; }
+		.rs_searchWrap .rs_multiSearchBoxTabsList .rs_mutliSearchBoxSelect { display:none; }
+
+		#changeSearchForm { background:none; border:none; }
+
+		#changeSearchForm .rs_multiSearchBoxAutosuggest { height:40px; }
+		#changeSearchForm .rs_multiSearchBoxCalendarShow { height:40px; }
+		#changeSearchForm .rs_multiSearchBoxRooms { height:50px; }
+		#changeSearchForm .rs_multiSearchBoxContent_car .left { width:48%; margin-right:3.5%; }
+
+		#changeSearchForm .rs_multiSearchBoxContent_hotel { border:1px solid #cacaca; padding:5px 30px 15px; }
+		#changeSearchForm .rs_multiSearchBoxContent_car { border:1px solid #cacaca; padding:5px 30px 15px; }
+		#changeSearchForm .rs_multiSearchBoxContent_air { border:1px solid #cacaca; padding:5px 30px 15px; }
+		#changeSearchForm .rs_multiSearchBoxContent_vp { border:1px solid #cacaca; padding:5px 30px 15px; }
+	</style>
+<![endif]-->
+
+<script type='text/javascript' src='http://secure.rezserver.com/js/searchbox.js'></script>
+<script type="text/javascript">
+function switchTab() {
+	rs_switchTab($("#respSelect").val(), "#changeSearchForm");
+}
+</script>
+<!-- END -->
+
+</head>
+
+<body>
+
+<!-- SEARCHBOX CODE -->
+<div class="rs_searchWrap">
+	<div class='searchBox rs_multiSearchBoxes' id='changeSearchForm'>
+		<div class='rs_multiSearchBoxTabsList'>
+			<span class='options white' onclick='rs_switchTab("hotel", rs_getParent($(this)));'><input type='radio' class='radio' name='search_options' id='radio_hotel' checked /><label for='radio_hotel'>Hotels</label></span>
+			<span class='options' onclick='rs_switchTab("air", rs_getParent($(this)));'><input type='radio' class='radio' name='search_options' id='radio_air' /><label for='radio_air'>Flights</label></span>
+			<span class='options' onclick='rs_switchTab("car", rs_getParent($(this)));'><input type='radio' class='radio' name='search_options' id='radio_car' /><label for='radio_car'>Cars</label></span>
+			<span class='options' onclick='rs_switchTab("vp", rs_getParent($(this)));'><input type='radio' class='radio' name='search_options' id='radio_vp' /><label for='radio_vp'>Vacation Packages</label></span>
+			<span class='options' onclick='window.location.replace("http://farebully.com/");'><input type='radio' class='radio' name='search_options' id='radio_cruise' /><label for='radio_cruise'>Cruises</label></span>
+			<span class='options' onclick='window.location.replace("http://farebully.com/");'><input type='radio' class='radio' name='search_options' /><label for='radio_more'>More</label></span>
+			<div class='clear'></div>
+			<select onchange='switchTab(); if(this.selectedIndex > 3) window.open("http://farebully.com/");' class="rs_mutliSearchBoxSelect" id="respSelect">
+				<option value="hotel">Hotels</option>
+				<option value="car">Cars</option>
+				<option value="air">Flights</option>
+				<option value="vp">Vacation Packages</option>
+				<option value="">Cruises</option>
+				<option value="">More</option>
+			</select>
+		</div>
+		<div class='rs_searchbox'>
+			<div class='rs_multiSearchBoxContent_hotel'>
+				<form class='rs_multiSearchBoxForm_hotel' onsubmit='if(rs_checkSearchForm("hotel", rs_getParent($(this)))) { return true; } else { return false; }'>
+					<input name='refclickid' type='hidden' value='right' />
+					<h2>Search and Save on Hotels</h2>
+					<div class='style'>
+						<div class='rs_multiSearchBoxAutosuggestContainer rs_multiSearchBoxAutosuggestContainer_destination'>
+							<div class='label'>Where are you going?</div>
+							<input name='rs_city' value='Enter City or Airport' onclick='$(this).val("");' class='rs_multiSearchBoxAutosuggest' autocomplete=OFF />
+							<input type='hidden' name='rs_cid' class='rs_autocomplete_cityid' value='' />
+							<div class='clear'></div>
+							<div class='rs_multiSearchBoxAutosuggestResults'>
+								Loading...
+							</div>
+						</div>
+					</div>
+					<div class='style'>
+						<div class='rs_multiSearchBoxCalendarGroupContainer rs_multiSearchBoxCalendarGroupContainer_stayDuration'>	
+							<div class='left'>
+								<div class='label'>Check in</div>
+								<div class='rs_multiSearchBoxCalendarContainer rs_multiSearchBoxCalendarContainer_checkIn'>
+									<input name='rs_chk_in' type='text' value='mm/dd/yyyy' autocomplete=OFF class='rs_multiSearchBoxCalendarShow' />
+									<div class='clear'></div>
+									<div class='rs_multiSearchBoxCalendar'>
+										Loading...
+									</div>
+								</div>
+							</div>
+							<div class='left'>
+								<div class='label'>Check out</div>
+								<div class='rs_multiSearchBoxCalendarContainer rs_multiSearchBoxCalendarContainer_checkOut'>
+									<input name='rs_chk_out' type='text' value='mm/dd/yyyy' autocomplete=OFF class='rs_multiSearchBoxCalendarShow' />
+									<div class='clear'></div>
+									<div class='rs_multiSearchBoxCalendar'>
+										Loading...
+									</div>
+								</div>
+							</div>
+							<div class="left noMargin">
+								<div class='label'>Rooms</div>
+								<select class='rs_multiSearchBoxRooms' name='rs_rooms'>
+									<option value="1">1 Room</option>
+									<option value="2">2 Rooms</option>
+									<option value="3">3 Rooms</option>
+									<option value="4">4 Rooms</option>
+									<option value="5">5 Rooms</option>
+									<option value="6">6 Rooms</option>
+									<option value="7">7 Rooms</option>
+									<option value="8">8 Rooms</option>
+									<option value="9">9+ Rooms</option>
+								</select>
+							</div>
+							<div class='clear'></div>
+						</div>
+					</div>
+					<button class='search' onclick="_gaq.push(['_trackEvent', 'Search Form', 'Search', 'Right']);" type='submit'>Search Hotels</button>
+				</form>
+				<div class='clear'></div>
+			</div>
+		</div>
+		<div class='rs_searchbox'>
+			<div class='rs_multiSearchBoxContent_car'>
+				<form class='rs_multiSearchBoxForm_car' onsubmit='if(rs_checkSearchForm("car", rs_getParent($(this)))) { return true; } else { return false; }'>
+					<input name='refclickid' type='hidden' value='right' />
+					<h2>Search and Save on Rental Cars</h2>
+					<div class='style'>
+						<div class='rs_multiSearchBoxAutosuggestContainer rs_multiSearchBoxAutosuggestContainer_pickUp'>
+							<div class='label'>Pick-up Location</div>
+							<input name='rs_pu_city' value='City or Airport Name' onclick='$(this).val("");' class='rs_multiSearchBoxAutosuggest location' autocomplete=OFF />
+							<div class='clear'></div>
+							<div class='rs_multiSearchBoxAutosuggestResults'>
+								Loading...
+							</div>
+						</div>
+						<div class='rs_multiSearchBoxAutosuggestContainer rs_multiSearchBoxAutosuggestContainer_dropOff' style='display: none;'>
+							<div class='label'>Drop-off Location</div> 
+							<input class='rs_multiSearchBoxAutosuggest location' value='City or Airport Name' onclick='$(this).val("");' name='rs_do_city' autocomplete='OFF'>
+							<div class='clear'></div>
+							<div class='rs_multiSearchBoxAutosuggestResults'>
+								Loading...
+							</div> 
+						</div>
+						<div class='clear'></div>
+						<input type='checkbox' name='rs_return_different' class='inline' id='rs_multiSearchBoxReturnDifferent'>
+						<label for='rs_multiSearchBoxReturnDifferent' class='inline' style="font-size:12px;">Return at a different location?</label>
+					</div>
+					<div class='rs_multiSearchBoxCalendarGroupContainer rs_multiSearchBoxCalendarGroupContainer_stayDuration'>
+						<div class='left' style="margin-bottom:5px;">
+							<div class='label'>Pick-up Date</div>
+							<div class='rs_multiSearchBoxCalendarContainer rs_multiSearchBoxCalendarContainer_checkIn'>
+								<input name='rs_pu_date' type='text' value='mm/dd/yyyy' autocomplete=OFF class='rs_multiSearchBoxCalendarShow' />
+								<select class='rs_multiSearchBoxCalendarTime' name='rs_pu_time' class='rs_pu_time'>
+									<option value='00:00'>Midnight</option><option value='00:30'>12:30 AM</option><option value='01:00'>1:00 AM</option><option value='01:30'>1:30 AM</option><option value='02:00'>2:00 AM</option><option value='02:30'>2:30 AM</option><option value='03:00'>3:00 AM</option><option value='03:30'>3:30 AM</option><option value='04:00'>4:00 AM</option><option value='04:30'>4:30 AM</option><option value='05:00'>5:00 AM</option><option value='05:30'>5:30 AM</option><option value='06:00'>6:00 AM</option><option value='06:30'>6:30 AM</option><option value='07:00'>7:00 AM</option><option value='07:30'>7:30 AM</option><option value='08:00'>8:00 AM</option><option value='08:30'>8:30 AM</option><option value='09:00'>9:00 AM</option><option value='09:30'>9:30 AM</option><option value='10:00' selected='SELECTED'>10:00 AM</option><option value='10:30'>10:30 AM</option><option value='11:00'>11:00 AM</option><option value='11:30'>11:30 AM</option><option value='12:00'>Noon</option><option value='12:30'>12:30 PM</option><option value='13:00'>1:00 PM</option><option value='13:30'>1:30 PM</option><option value='14:00'>2:00 PM</option><option value='14:30'>2:30 PM</option><option value='15:00'>3:00 PM</option><option value='15:30'>3:30 PM</option><option value='16:00'>4:00 PM</option><option value='16:30'>4:30 PM</option><option value='17:00'>5:00 PM</option><option value='17:30'>5:30 PM</option><option value='18:00'>6:00 PM</option><option value='18:30'>6:30 PM</option><option value='19:00'>7:00 PM</option><option value='19:30'>7:30 PM</option><option value='20:00'>8:00 PM</option><option value='20:30'>8:30 PM</option><option value='21:00'>9:00 PM</option><option value='21:30'>9:30 PM</option><option value='22:00'>10:00 PM</option><option value='22:30'>10:30 PM</option> 
+								</select>
+								<div class='clear'></div>
+								<div class='rs_multiSearchBoxCalendar'>
+									Loading...
+								</div>
+							</div>
+						</div>
+						<div class='left noMargin'>
+							<div class='label'>Drop-off Date</div>
+							<div class='rs_multiSearchBoxCalendarContainer rs_multiSearchBoxCalendarContainer_checkOut'>
+								<input name='rs_do_date' type='text' value='mm/dd/yyyy' autocomplete=OFF class='rs_multiSearchBoxCalendarShow' />
+								<select class='rs_multiSearchBoxCalendarTime' name='rs_do_time' class='rs_do_time'>
+									<option value='00:00'>Midnight</option><option value='00:30'>12:30 AM</option><option value='01:00'>1:00 AM</option><option value='01:30'>1:30 AM</option><option value='02:00'>2:00 AM</option><option value='02:30'>2:30 AM</option><option value='03:00'>3:00 AM</option><option value='03:30'>3:30 AM</option><option value='04:00'>4:00 AM</option><option value='04:30'>4:30 AM</option><option value='05:00'>5:00 AM</option><option value='05:30'>5:30 AM</option><option value='06:00'>6:00 AM</option><option value='06:30'>6:30 AM</option><option value='07:00'>7:00 AM</option><option value='07:30'>7:30 AM</option><option value='08:00'>8:00 AM</option><option value='08:30'>8:30 AM</option><option value='09:00'>9:00 AM</option><option value='09:30'>9:30 AM</option><option value='10:00' selected='SELECTED'>10:00 AM</option><option value='10:30'>10:30 AM</option><option value='11:00'>11:00 AM</option><option value='11:30'>11:30 AM</option><option value='12:00'>Noon</option><option value='12:30'>12:30 PM</option><option value='13:00'>1:00 PM</option><option value='13:30'>1:30 PM</option><option value='14:00'>2:00 PM</option><option value='14:30'>2:30 PM</option><option value='15:00'>3:00 PM</option><option value='15:30'>3:30 PM</option><option value='16:00'>4:00 PM</option><option value='16:30'>4:30 PM</option><option value='17:00'>5:00 PM</option><option value='17:30'>5:30 PM</option><option value='18:00'>6:00 PM</option><option value='18:30'>6:30 PM</option><option value='19:00'>7:00 PM</option><option value='19:30'>7:30 PM</option><option value='20:00'>8:00 PM</option><option value='20:30'>8:30 PM</option><option value='21:00'>9:00 PM</option><option value='21:30'>9:30 PM</option><option value='22:00'>10:00 PM</option><option value='22:30'>10:30 PM</option>
+								</select>
+								<div class='clear'></div>
+								<div class='rs_multiSearchBoxCalendar'>
+									Loading...
+								</div>
+							</div>
+						</div>
+						<div class='clear'></div>
+						<button class='search' onclick="_gaq.push(['_trackEvent', 'Search Form', 'Search', 'Right']);" type='submit'>Search Cars</button>
+						<div class='clear'></div>
+					</div>
+					<div class='clear'></div>
+				</form>
+			</div>
+		</div>
+		<div class='rs_searchbox'>
+			<div class='rs_multiSearchBoxContent_vp'>
+				<form class='rs_multiSearchBoxForm_vp' onsubmit='if(rs_checkSearchForm("vp", rs_getParent($(this)))) { return true; } else { return false; }'>
+					<h2>Search and Save on Vacations</h2>
+					<div class='style'>
+						<div class='rs_multiSearchBoxAutosuggestContainer rs_multiSearchBoxAutosuggestContainer_origin'>
+							<div class='label'>From</div>  <!-- EXTRA -->
+							<input name='rs_o_city' value='City or Airport Name' onclick='$(this).val("");' class='rs_multiSearchBoxAutosuggest' autocomplete=OFF />
+							<div class='clear'></div>
+							<div class='rs_multiSearchBoxAutosuggestResults'>
+								Loading...
+							</div>
+						</div>
+					</div>
+					<div class='style'>
+						<div class='label'>To</div>
+						<div class='rs_multiSearchBoxAutosuggestContainer rs_multiSearchBoxAutosuggestContainer_destination'>
+							<input name='rs_d_city' value='City or Airport Name' onclick='$(this).val("");' class='rs_multiSearchBoxAutosuggest' autocomplete=OFF />
+							<div class='clear'></div>
+							<div class='rs_multiSearchBoxAutosuggestResults'>
+								Loading...
+							</div>
+						</div>
+					</div>
+					<div class='clear'></div>
+					<div class='rs_multiSearchBoxCalendarGroupContainer rs_multiSearchBoxCalendarGroupContainer_stayDuration'>
+						<div class='left'>
+							<div class='label'>Check in</div>
+							<div class='rs_multiSearchBoxCalendarContainer rs_multiSearchBoxCalendarContainer_checkIn'>
+								<input name='rs_chk_in' type='text' value='mm/dd/yyyy' autocomplete=OFF class='rs_multiSearchBoxCalendarShow' />
+								<div class='clear'></div>
+								<div class='rs_multiSearchBoxCalendar'>
+									Loading...
+								</div>
+							</div>
+						</div>
+						<div class='left noMargin'>
+							<div class='label'>Check out</div>
+							<div class='rs_multiSearchBoxCalendarContainer rs_multiSearchBoxCalendarContainer_checkOut'>
+								<input name='rs_chk_out' type='text' value='mm/dd/yyyy' autocomplete=OFF class='rs_multiSearchBoxCalendarShow' />
+								<div class='clear'></div>
+								<div class='rs_multiSearchBoxCalendar'>
+									Loading...
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='search_block'>
+						<input type='hidden' name='rs_passengers' autocomplete='off' value=''>
+						<div class='vp_passengers'>
+							<div class="label">Adults (18+)</div>
+							<select class='rs_multiSearchBoxRooms' name='rs_adults'>
+								<option value='1'>1 Adult</option>
+								<option value='2'>2 Adults</option>
+								<option value='3'>3 Adults</option>
+								<option value='4'>4 Adults</option>
+								<option value='5'>5 Adults</option>
+								<option value='6'>6 Adults</option>
+								<option value='7'>7 Adults</option>
+								<option value='8'>8 Adults</option>
+							</select>
+						</div>
+						<div class='vp_passengers'>
+							<div class="label">Children (0-17)</div>
+							<select class='rs_multiSearchBoxRooms' name='rs_children' onchange='rs_updateChildren(rs_getParent($(this)));'>
+								<option value='0' selected='SELECTED'>0 Children</option>
+								<option value='1'>1 Child</option>
+								<option value='2'>2 Children</option>
+								<option value='3'>3 Children</option>
+								<option value='4'>4 Children</option>
+								<option value='5'>5 Children</option>
+								<option value='6'>6 Children</option>
+								<option value='7'>7 Children</option>
+								<option value='8'>8 Children</option>
+							</select>
+						</div>
+						<div class='vp_passengers noMargin'>
+							<div class="label">Rooms</div>
+							<select class='rs_multiSearchBoxRooms' name='rs_rooms'>
+								<option value="1">1 Room</option>
+								<option value="2">2 Rooms</option>
+								<option value="3">3 Rooms</option>
+								<option value="4">4 Rooms</option>
+								<option value="5">5 Rooms</option>
+								<option value="6">6 Rooms</option>
+								<option value="7">7 Rooms</option>
+								<option value="8">8 Rooms</option>
+								<option value="9">9+ Rooms</option>
+							</select>
+						</div>
+						<div class="searchWrap"><button class='search' type='submit'>Search Vacations</button></div>
+						<div class='clear'></div>
+						<div class='rs_multiSearchBoxChildrensAgesContainer'>
+							<div class='rs_multiSearchBoxChildrensAges'>
+							</div>
+						</div>
+					</div>
+					<div class='clear'></div>
+	            </form>
+			</div>
+		</div>
+		<div class='rs_searchbox'>
+			<div class='rs_multiSearchBoxContent_air'>
+				<form class='rs_multiSearchBoxForm_air' onsubmit='if(rs_checkSearchForm("air", rs_getParent($(this)))) { return true; } else { return false; }'>
+					<input name='refclickid' type='hidden' value='right' />
+					<h2>Search and Save on Flights</h2>
+					<div class='air_options'>
+						<span class='air_option'><input type='radio' class='radio' name='rs_air_roundtrip' id='air_roundtrip' onclick='' checked /><label for='air_roundtrip' class='bold'>Round-trip</label></span>
+						<span class='air_option'><input type='radio' class='radio' name='rs_air_oneway' id='air_oneway' onclick='' /><label for='air_oneway'>One-way</label></span>
+						<span class='air_option' style="margin:0;"><input type='radio' class='radio' name='rs_air_multicity' id='air_multicity' onclick='window.location.replace(rs_cName + "/air/home/?refid=" + rs_refID);' /><label for='air_multicity'>Multi-city</label></span>
+					</div>
+					<input name='air_search_type' type='hidden' value='' />
+					<div class='air_roundtrip_box'>
+						<div class='rs_multisearchBoxAutosuggest' style="border:none;">
+							<div class='style'>
+								<div class='left'>
+									<div class='rs_multiSearchBoxAutosuggestContainer rs_multiSearchBoxAutosuggestContainer_origin'>
+										<div class='label'>Origin</div>
+										<input name='rs_o_city' value='City or Airport Name' onclick='$(this).val(""); ' class='rs_multiSearchBoxAutosuggest' autocomplete=OFF />
+										<div class='clear'></div>
+										<div class='rs_multiSearchBoxAutosuggestResults'>
+											Loading...
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class='style'>
+								<div class='left noMargin'>
+									<div class='rs_multiSearchBoxAutosuggestContainer rs_multiSearchBoxAutosuggestContainer_destination'>
+										<div class='label'>Destination</div>
+										<input name='rs_d_city' value='City or Airport Name' onclick='$(this).val(""); ' class='rs_multiSearchBoxAutosuggest' autocomplete=OFF />
+										<div class='clear'></div>
+										<div class='rs_multiSearchBoxAutosuggestResults'>
+											Loading...
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='rs_multiSearchBoxCalendarGroupContainer rs_multiSearchBoxCalendarGroupContainer_stayDuration'>
+							<div class='left'>
+								<div class='label'>Depart</div>
+								<div class='rs_multiSearchBoxCalendarContainer rs_multiSearchBoxCalendarContainer_checkIn'>
+									<input name='rs_chk_in' type='text' value='mm/dd/yyyy' autocomplete=OFF class='rs_multiSearchBoxCalendarShow' />
+									<div class='clear'></div>
+									<div class='rs_multiSearchBoxCalendar'>
+										Loading...
+									</div>
+								</div>
+							</div>
+							<div class='left noMargin'>
+								<div class='label'>Return</div>
+								<div class='rs_multiSearchBoxCalendarContainer rs_multiSearchBoxCalendarContainer_checkOut'>
+									<input name='rs_chk_out' type='text' value='mm/dd/yyyy' autocomplete=OFF class='rs_multiSearchBoxCalendarShow' />
+									<div class='clear'></div>
+									<div class='rs_multiSearchBoxCalendar'>
+										Loading...
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='air_multicity_box' style='display: none;'>
+						<div class='air_multicity_1'>
+							<div class='style'>
+								<div class='left'>
+									<div class='rs_multiSearchBoxAutosuggestContainer rs_multiSearchBoxAutosuggestContainer_origin1'>
+										<div class='label'>Origin</div>
+										<input name='rs_o_city1' value='City or Airport Name' onclick='$(this).val(""); ' class='rs_multiSearchBoxAutosuggest' autocomplete=OFF />
+										<div class='clear'></div>
+										<div class='rs_multiSearchBoxAutosuggestResults'>
+											Loading...
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class='style'>
+								<div class='left noMargin'>
+									<div class='rs_multiSearchBoxAutosuggestContainer rs_multiSearchBoxAutosuggestContainer_destination1'>
+										<div class='label'>Destination</div>
+										<input name='rs_d_city1' value='City or Airport Name' onclick='$(this).val(""); ' class='rs_multiSearchBoxAutosuggest' autocomplete=OFF />
+										<div class='clear'></div>
+										<div class='rs_multiSearchBoxAutosuggestResults'>
+											Loading...
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class='style'>
+								<div class='rs_multiSearchBoxCalendarGroupContainer rs_multiSearchBoxCalendarGroupContainer_stayDuration'>
+									<div class='left'>
+										<div class='label'>Depart</div>
+										<div class='rs_multiSearchBoxCalendarContainer rs_multiSearchBoxCalendarContainer_checkIn1'>
+											<input name='rs_chk_in1' type='text' value='mm/dd/yyyy' autocomplete=OFF class='rs_multiSearchBoxCalendarShow' />
+											<div class='clear'></div>
+											<div class='rs_multiSearchBoxCalendar'>
+												Loading...
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class='clear'></div>
+					<div class='air_passengers'>
+						<div class='label'>Adults (18+)</div>
+						<select class='rs_multiSearchBoxRooms' name='rs_adults'>
+							<option value='1'>1 Adult</option>
+							<option value='2'>2 Adults</option>
+							<option value='3'>3 Adults</option>
+							<option value='4'>4 Adults</option>
+							<option value='5'>5 Adults</option>
+							<option value='6'>6 Adults</option>
+							<option value='7'>7 Adults</option>
+							<option value='8'>8 Adults</option>
+						</select>
+					</div>
+					<div class='air_passengers'>
+						<div class='label'>Children (2-17)</div>
+						<select class='rs_multiSearchBoxRooms' name='rs_children'>
+							<option value='0' selected='SELECTED'>0 Children</option>
+							<option value='1'>1 Child</option>
+							<option value='2'>2 Children</option>
+							<option value='3'>3 Children</option>
+							<option value='4'>4 Children</option>
+							<option value='5'>5 Children</option>
+							<option value='6'>6 Children</option>
+							<option value='7'>7 Children</option>
+							<option value='8'>8 Children</option>
+						</select>
+					</div>
+					<div class='air_cabin'>
+						<div class='label'>Cabin Class</div>
+						<select class='rs_multiSearchBoxCabin' name='rs_cabin'>
+							<option value=''>Economy/Coach</option>
+							<option value='Business'>Business</option>
+							<option value='First'>First</option>
+						</select>
+					</div>
+					<div class='clear'></div>
+					<button class='search' onclick="_gaq.push(['_trackEvent', 'Search Form', 'Search', 'Right']);" type='submit'>Search Flights</button>
+					<div class='clear'></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

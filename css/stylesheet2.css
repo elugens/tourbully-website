@@ -1,0 +1,16 @@
+﻿body,html {
+	background-position:center top;
+	background-image:url(../images/body_bg.png);
+	background-repeat:no-repeat;background-color:#FFF;margin:0
+}
+#wrapper {
+	width:960px;
+	margin:0 auto;
+	background-color:#FFF;
+}
+#headertop {
+	margin:auto;
+	height:44px;
+	background-image:url('../images/footerbg.jpg');
+	background-repeat:repeat-x;	
+}

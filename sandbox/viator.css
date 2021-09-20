@@ -1,0 +1,308 @@
+﻿body {
+	
+	background: #fff;
+	margin:0;
+	padding:0;
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px;
+	color:#000;
+}
+
+.clear {
+	clear:both;
+}
+
+h1, h2 {
+	color:#004c85;
+
+}
+
+.spanyel {
+	color:#ffba01;
+}
+#wrapper {
+	margin:auto;
+}
+#headertop {
+	background:#002c4e;
+	height:44px;
+}
+#header {
+	background: url('../../images/topbg.jpg') repeat-x;
+	height:66px;
+}
+
+#bookbyphoneheader {
+	width:960px;
+	margin:auto;
+	padding:12px 0;
+	color:#FFF;
+	font-weight:bold;
+	text-align:center;
+	font-size:12px;
+
+}
+#subtop .wrapsubtop {
+	width:960px;
+	margin:0 auto;
+}
+#subtop .wrapsubtop .logo {
+	float:left;
+	margin:7px 0 0 0;
+}
+#subtop .wrapsubtop .logo img {
+	outline:none;
+	border:none;
+}
+#subtop .wrapsubtop .navmenu {
+	float:right;
+	margin:0;
+	text-transform:uppercase;
+}
+#subtop .wrapsubtop .navmenu ul {
+	margin:0;
+	padding:0;
+}
+#subtop .wrapsubtop .navmenu ul li {
+	list-style-type:none;
+	float:left;
+	margin:0;
+	padding:0 15px;
+	line-height:64px;
+}
+#subtop .wrapsubtop .navmenu ul li:hover {
+	background: url('../../images/navh.png') repeat-x;
+	height:64px;
+	line-height:64px;
+}
+
+#subtop .wrapsubtop .navmenu ul li a {
+	font-size:14px;
+	color:#fff;
+	text-decoration:none;
+	line-height:64px;
+	display:block;
+	text-shadow: 0px -1px 2px #002c4e;
+}
+#subtop .wrapsubtop .navmenu ul li a:hover {
+	text-decoration:none;
+}
+
+#subtop .wrapsubtop .navmenu ul .last:hover {
+	background:none;
+}
+#subtop .wrapsubtop .navmenu ul #signin:hover {
+	background: url('../../images/loginbtnh.png') no-repeat;
+}
+nav li { 
+	position:relative;
+	float:left;
+	list-style-type:none;
+}
+
+
+
+#subtop .wrapsubtop .navmenu .submenu li:hover {
+	padding:0;
+	margin:0;
+	height:25px;
+	background:none;
+}
+
+#subtop .wrapsubtop .navmenu .submenu li a:hover {
+	line-height:25px;
+	padding:0 0 0 10px;
+	color:#ffba01;
+}
+
+/* START OF MAINCONTENT CSS */
+/* END OF MAINCONTENT CSS */
+
+#socialfooter {
+background-image:url('../../images/quicklinks-bg.png');
+	margin:auto;
+	height:200px;
+	border-top:2px #CCCCCC solid;
+}
+
+
+#quicklinkinfo {
+	width:960px;
+	margin:auto;
+	height:200px;
+}
+#quicklinkbox {
+	width:25%;
+	float:left;
+	margin:auto;
+	margin-top:10px;
+
+}
+
+#travelblog h2 {
+	margin-left:40px;
+	position:absolute;
+	margin-top:1px;	
+
+}
+#travelblog p {
+	font-size:12px;
+	margin-left:50px;
+	margin-bottom:5px;
+	margin-top:5px;
+
+}
+
+.travelbloglink {
+	text-align:center;
+	margin:20px 0 5px 0;
+
+}
+
+.travelbloglink a {
+	color:#004c85;
+	text-decoration:none;
+	font-size:18px;
+	font-weight:bold;
+}
+
+#socialinvite h2 {
+	margin-left:40px;
+	position:absolute;
+	margin-top:1px;
+}
+#socialinvite ul {
+	margin-top:-5px;
+}
+
+#socialinvite ul li {
+	display:inline;
+	list-style:none;	
+}
+
+#socialinvite ul li a img {
+	border:0px;
+}
+#quicklinks h2 {
+	margin-left:40px;
+	position:absolute;
+	margin-top:1px;
+}
+
+#quicklinks ul {
+	margin-top:-5px;
+	margin-left:0px;
+}
+#quicklinks ul li {
+	padding:1px;
+	display:block;
+	list-style:none;
+	font-size:14px;
+	
+}
+
+#quicklinks ul li a {
+	color:#002c4e;
+	text-decoration:none;
+}
+
+#quicklinks ul li a:hover  {
+	color:#004c85;
+	text-decoration:underline;
+}
+
+
+#travelsaver h2 {
+	margin-left:40px;
+	position:absolute;
+	margin-top:1px;
+	margin-bottom:5px;
+}
+	
+#travelsaver .subscriberbtn {
+	border-style: none;
+	border-color: inherit;
+	border-width: 0;
+	padding: 0px 0 0 0px;
+	margin: 5px 0 5px 45px;
+	background: url('../../images/loginbtn.png') no-repeat;
+	display:inline;
+	width:80px;
+	line-height:20px;
+	text-align:center;
+	font-size:12px;
+	font-weight:700;
+	color:#7d5200;
+	text-shadow: 0px 1px 0px rgba(252, 214, 83, 0.75);
+	}
+	#travelsaver .inputbox {
+	border:none;
+	border-radius:3px;
+	width:100px;
+	height:20px;
+	-moz-box-shadow: 1px 1px 2px rgba(201, 201, 201, 1) inset;
+	-webkit-box-shadow: 1px 1px 2px rgba(201, 201, 201, 1) inset;
+	box-shadow: 1px 1px 2px rgba(201, 201, 201, 1) inset;
+	padding:0 10px 0 5px;
+	color:#8d8d8d;
+	font-size:12px;
+	outline:#999999 solid 1px;
+	}
+#travelsaver form {
+	margin-left:40px;
+	
+}
+
+
+#footer {
+	background: url('../../images/footerbg.jpg') repeat-x;
+	height:55px;
+}
+
+#footer .wrapfooter {
+	width:910px;
+	margin:0 auto;
+	font-size:12px;
+}
+#footer .wrapfooter .links {
+	text-align:center;
+	width:910px;
+	float:left;
+	margin:20px 0 0 0;
+}
+#footer .wrapfooter .links ul {
+	margin:0;
+	padding:0;
+}
+#footer .wrapfooter .links ul li {
+	list-style-type:none;
+	float:left;
+	padding:0 10px;
+}
+#footer .wrapfooter .links ul li a {
+	color:#fff;
+	text-decoration:none;
+	outline:none;
+	border:none;
+	font-size:12px;
+	text-shadow: 0px -1px 0px rgba(0, 44, 78, 0.5);
+}
+#footer .wrapfooter .links ul li a:hover {
+	text-decoration:underline;
+}
+#footerbottom {
+	margin:auto;
+	background:#002c4e;
+	height:44px;
+}
+#footerbottom .wrapfooter2 p {
+	color:#fff;
+	text-align:center;
+	margin:0 auto;
+	padding:15px 0 0 0;
+	font-size:12px;
+}
+#footerbottom .wrapfooter2 p a {
+	color:#ffba01;
+	text-decoration:none;
+}
